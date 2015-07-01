@@ -1,0 +1,8 @@
+﻿<Window x:Class="JoyHoodApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="JoyHood App: Authorization" Height="500" Width="700">
+    <Grid>
+        <WebBrowser x:Name="WebBrowser1" LoadCompleted="WebBrowser1_LoadCompleted" />
+    </Grid>
+</Window>

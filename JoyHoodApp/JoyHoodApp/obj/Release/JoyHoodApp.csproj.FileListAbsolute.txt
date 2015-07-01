@@ -1,0 +1,15 @@
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\bin\Release\JoyHoodApp.exe
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\bin\Release\JoyHoodApp.pdb
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\bin\Release\Newtonsoft.Json.dll
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\bin\Release\Newtonsoft.Json.xml
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\GroupWindow.baml
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\MainWindow.baml
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\GroupWindow.g.cs
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\MainWindow.g.cs
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\App.g.cs
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\JoyHoodApp_MarkupCompile.cache
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\JoyHoodApp.g.resources
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\JoyHoodApp.Properties.Resources.resources
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\JoyHoodApp.csproj.GenerateResource.Cache
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\JoyHoodApp.exe
+C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Release\JoyHoodApp.pdb
