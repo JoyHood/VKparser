@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="Token.cs" />
     <Compile Include="Scope.cs" />
+    <Compile Include="VK.cs" />
     <Compile Include="VKAPI.cs" />
     <Page Include="GroupWindow.xaml">
       <SubType>Designer</SubType>

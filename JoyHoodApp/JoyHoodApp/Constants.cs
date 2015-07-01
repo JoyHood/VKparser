@@ -18,5 +18,6 @@ namespace JoyHoodApp
         public const string GET_INVITED_USERS = "groups.getInvitedUsers";
         public const string INVITE_FRIEND = "groups.invite";
         public const string IS_MEMBER = "groups.isMember";
+        public const string ADD_TO_MYFRIENDS = "friends.add";
     }
 }
