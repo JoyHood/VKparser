@@ -84,7 +84,10 @@ namespace JoyHoodApp
             var friends = GetFriends(accessToken);
             foreach (var friend in friends)
             {
-
+                if (ShouldBeAdded(friend, groupId, accessToken))
+                {
+                    Invite(friend, groupId, accessToken);
+                }
             }
         }
 
@@ -124,6 +127,31 @@ namespace JoyHoodApp
                 offset = offset + take + 1;
             }
             _invitedUsers = users;
-        } 
+        }
+
+        private bool IsMember(int userId, string groupId, string accessToken)
+        {
+            var api = new VKAPI(accessToken);
+            var queryString = new NameValueCollection();
+            queryString["group_id"] = groupId;
+            queryString["user_id"] = userId.ToString();
+            string jsonString = api.ExecuteCommand(Constants.IS_MEMBER, queryString);
+            var json = JObject.Parse(jsonString);
+            return (bool)json["response"];
+        }
+
+        private bool ShouldBeAdded(int userId, string groupId, string accessToken)
+        {
+            return !IsMember(userId, groupId, accessToken) && !_invitedUsers.Contains(userId);
+        }
+
+        private void Invite(int userId, string groupId, string accessToken)
+        {
+            var api = new VKAPI(accessToken);
+            var queryString = new NameValueCollection();
+            queryString["group_id"] = groupId;
+            queryString["user_id"] = userId.ToString();
+            api.ExecuteCommand(Constants.INVITE_FRIEND, queryString);
+        }
     }
 }
