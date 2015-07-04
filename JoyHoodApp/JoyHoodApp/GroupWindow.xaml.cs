@@ -59,8 +59,7 @@ namespace JoyHoodApp
         {
             try
             {
-                var epsilon = members.Count%50 == 0 ? 0 : 1;
-                var limit = Math.Floor((double) members.Count/50) + epsilon;
+                var limit = Math.Floor((double) members.Count/50);
                 for (int i = 0; i < limit; i++)
                 {
                     using (var writer = new StreamWriter(String.Format(Constants.FILE_MEMBERS, i), false))
@@ -69,6 +68,14 @@ namespace JoyHoodApp
                         {
                             writer.WriteLine(members[i+j]);
                         }
+                    }
+                }
+
+                using (var writer = new StreamWriter(String.Format(Constants.FILE_MEMBERS, limit), false))
+                {
+                    for (int i = 0; i < members.Count - ((int)limit * 50); i++)
+                    {
+                        writer.WriteLine((int)limit * 50 + i);
                     }
                 }
                 MessageBox.Show("All users from group was written in file");
