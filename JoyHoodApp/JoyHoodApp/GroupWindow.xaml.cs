@@ -30,7 +30,7 @@ namespace JoyHoodApp
             WriteMembers(members);
         }
 
-        private IEnumerable<int> GetGroupMembers(string groupId, string accessToken)
+        private List<int> GetGroupMembers(string groupId, string accessToken)
         {
             var take = 1000;
             var offset = 0;
@@ -55,18 +55,23 @@ namespace JoyHoodApp
             return items;
         }
 
-        private void WriteMembers(IEnumerable<int> members)
+        private void WriteMembers(List<int> members)
         {
             try
             {
-                using (var writer = new StreamWriter(Constants.FILE_MEMBERS, false))
+                var epsilon = members.Count%50 == 0 ? 0 : 1;
+                var limit = Math.Floor((double) members.Count/50) + epsilon;
+                for (int i = 0; i < limit; i++)
                 {
-                    foreach (var member in members)
+                    using (var writer = new StreamWriter(String.Format(Constants.FILE_MEMBERS, i), false))
                     {
-                        writer.WriteLine(member);
+                        for(int j = 0; j<50; j++)
+                        {
+                            writer.WriteLine(members[i+j]);
+                        }
                     }
-                    MessageBox.Show("All users from group was written in file");
                 }
+                MessageBox.Show("All users from group was written in file");
             }
             catch (Exception ex)
             {

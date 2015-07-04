@@ -8,7 +8,7 @@
         public const string REQUEST_URL_PARAMS = @"https://api.vkontakte.ru/method/{0}?access_token={1}&{2}";
         public const string REQUEST_URL = @"https://api.vkontakte.ru/method/{0}?access_token={1}";
         public const string GET_MEMBERS = "groups.getMembers";
-        public const string FILE_MEMBERS = @"D:\test\members.txt";
+        public const string FILE_MEMBERS = @"C:\Users\Zhenya\Documents\JoyHood\members_{0}.txt";
         public const string GET_FRIENDS = "friends.get";
         public const string GET_INVITED_USERS = "groups.getInvitedUsers";
         public const string INVITE_FRIEND = "groups.invite";

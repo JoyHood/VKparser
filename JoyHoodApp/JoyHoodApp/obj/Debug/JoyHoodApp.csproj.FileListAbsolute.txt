@@ -13,3 +13,19 @@ C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\
 C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.csproj.GenerateResource.Cache
 C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.exe
 C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.pdb
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.exe
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.pdb
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\bin\Debug\JoyHoodApp.exe
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\bin\Debug\JoyHoodApp.pdb
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.csprojResolveAssemblyReference.cache
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\GroupWindow.baml
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\MainWindow.baml
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\GroupWindow.g.cs
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\MainWindow.g.cs
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\App.g.cs
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp_MarkupCompile.cache
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.g.resources
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.Properties.Resources.resources
+C:\Users\Zhenya\Documents\JoyHood2\JoyHoodApp\JoyHoodApp\obj\Debug\JoyHoodApp.csproj.GenerateResource.Cache
