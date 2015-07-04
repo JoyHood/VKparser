@@ -14,6 +14,9 @@
         public const string INVITE_FRIEND = "groups.invite";
         public const string IS_MEMBER = "groups.isMember";
         public const string ADD_TO_MYFRIENDS = "friends.add";
-        public const string ADDFRIEND_TEXT = "Здравствуйте, добавьте меня в друзья !";
+        public const string ADDFRIEND_TEXT = "Привет!" +
+                                             "Присоединяйся к нам. " +
+                                             "JoyHood - удобная площадка для того, чтобы выгодно купить или продать детские вещи (детскую одежду, обувь, коляски и пр.). У нас есть много классных предложений. " +
+                                             "Вещи на любой вкус. Ассортимент постоянно пополняется";
     }
 }
