@@ -9,9 +9,12 @@
         <Label Content="" x:Name="AccessToken" HorizontalAlignment="Left" Margin="153,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.031,0.583"/>
         <Label Content="Введите ID группы:" HorizontalAlignment="Left" Margin="23,72,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="153,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" x:Name="GroupId"/>
-        <Button Content="Получить участников" HorizontalAlignment="Left" Margin="394,72,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click"/>
-        <Label Content="Введите ID группы для приглашения:" HorizontalAlignment="Left" Margin="23,121,0,0" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,-1.895"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="262,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="GroupForInvitationId" Width="219"/>
-        <Button Content="Пригласить друзей" HorizontalAlignment="Left" Margin="503,121,0,0" VerticalAlignment="Top" Width="129" Click="Button_Click_1"/>
+        <Button Content="Получить участников" HorizontalAlignment="Left" Margin="398,72,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click"/>
+        <Label Content="Введите ID группы для приглашения:" HorizontalAlignment="Left" Margin="23,164,0,0" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,-1.895"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="262,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="GroupForInvitationId" Width="219"/>
+        <Button Content="Пригласить друзей" HorizontalAlignment="Left" Margin="503,164,0,0" VerticalAlignment="Top" Width="129" Click="Button_Click_1"/>
+        <Button Content="Добавить в друзья" HorizontalAlignment="Left" Margin="398,120,0,0" VerticalAlignment="Top" Width="126" Click="AddToFriend_Click"/>
+        <Button Content="Выберите файл" HorizontalAlignment="Left" Margin="23,120,0,0" VerticalAlignment="Top" Width="106" Click="OpenFile_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="153,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" x:Name="tbFile"/>
     </Grid>
 </Window>

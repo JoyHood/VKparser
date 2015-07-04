@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace JoyHoodApp
+﻿namespace JoyHoodApp
 {
     public static class Constants
     {
@@ -13,11 +8,12 @@ namespace JoyHoodApp
         public const string REQUEST_URL_PARAMS = @"https://api.vkontakte.ru/method/{0}?access_token={1}&{2}";
         public const string REQUEST_URL = @"https://api.vkontakte.ru/method/{0}?access_token={1}";
         public const string GET_MEMBERS = "groups.getMembers";
-        public const string FILE_MEMBERS = @"C:\Users\Zhenya\Documents\Visual Studio 2012\Projects\members.txt";
+        public const string FILE_MEMBERS = @"D:\test\members.txt";
         public const string GET_FRIENDS = "friends.get";
         public const string GET_INVITED_USERS = "groups.getInvitedUsers";
         public const string INVITE_FRIEND = "groups.invite";
         public const string IS_MEMBER = "groups.isMember";
         public const string ADD_TO_MYFRIENDS = "friends.add";
+        public const string ADDFRIEND_TEXT = "Здравствуйте, добавьте меня в друзья !";
     }
 }

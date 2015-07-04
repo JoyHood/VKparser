@@ -3,18 +3,8 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Timers;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace JoyHoodApp
@@ -67,12 +57,20 @@ namespace JoyHoodApp
 
         private void WriteMembers(IEnumerable<int> members)
         {
-            using (var writer = new StreamWriter(Constants.FILE_MEMBERS, false))
+            try
             {
-                foreach (var member in members)
+                using (var writer = new StreamWriter(Constants.FILE_MEMBERS, false))
                 {
-                    writer.WriteLine(member);
+                    foreach (var member in members)
+                    {
+                        writer.WriteLine(member);
+                    }
+                    MessageBox.Show("All users from group was written in file");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("Some error {0}", ex.Message));
             }
         }
 
@@ -152,6 +150,60 @@ namespace JoyHoodApp
             queryString["group_id"] = groupId;
             queryString["user_id"] = userId.ToString();
             api.ExecuteCommand(Constants.INVITE_FRIEND, queryString);
+        }
+
+        private void AddToFriend_Click(object sender, RoutedEventArgs e)
+        {
+            // Макс. заявок в друзья в сутки – 50 заявок
+            try
+            {
+                var result = MessageBox.Show("The daily limit for adding to friends in the VC is 50 ! Run once a day! Continue?", 
+                    "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.Yes)
+                {
+                    int counter = 0;
+                    string accessToken = AccessToken.Content.ToString();
+                    using (var sr = new StreamReader(tbFile.Text))
+                    {
+                        string line;
+                        while ((line = sr.ReadLine()) != null && counter < 50)
+                        {
+                            int userId = 0;
+                            int.TryParse(line, out userId);
+                            if (userId > 0)
+                            {
+                                VK.AddFriend(userId, accessToken);
+                                ++counter;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("Some error {0}", ex.Message));
+            }
+        }
+
+        private void OpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            // Create OpenFileDialog 
+            var dlg = new Microsoft.Win32.OpenFileDialog
+            {
+                DefaultExt = ".txt", 
+                Filter = "TXT Files (*.txt)|*.txt"
+            };
+
+            // Display OpenFileDialog by calling ShowDialog method 
+            var result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                tbFile.Text = filename;
+            }
         }
     }
 }
