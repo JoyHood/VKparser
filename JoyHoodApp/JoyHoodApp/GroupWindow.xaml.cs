@@ -59,14 +59,29 @@ namespace JoyHoodApp
         {
             try
             {
-                using (var writer = new StreamWriter(Constants.FILE_MEMBERS, false))
+                var skipCount = 0;
+                var dictCount = 0;
+                var dict = new Dictionary<int, List<int>>();
+                var arrayUserIds = members.ToList();
+                while (arrayUserIds.Count() > skipCount + Constants.DAY_LIMIT)
                 {
-                    foreach (var member in members)
-                    {
-                        writer.WriteLine(member);
-                    }
-                    MessageBox.Show("All users from group was written in file");
+                    skipCount = dictCount * Constants.DAY_LIMIT;
+                    var tmpList = arrayUserIds.Skip(skipCount).Take(Constants.DAY_LIMIT).ToList();
+                    dict.Add(++dictCount, tmpList);
                 }
+
+                foreach (var item in dict)
+                {
+                    using (var writer = new StreamWriter(Constants.DIRECTORY + "test_" + item.Key + ".txt", true))
+                    {
+                        foreach (var userId in item.Value)
+                        {
+                            writer.WriteLine(userId);
+                        }
+                    }
+                }
+                MessageBox.Show("All users from group was written in file");
+                
             }
             catch (Exception ex)
             {
@@ -157,8 +172,11 @@ namespace JoyHoodApp
             // Макс. заявок в друзья в сутки – 50 заявок
             try
             {
-                var result = MessageBox.Show("The daily limit for adding to friends in the VC is 50 ! Run once a day! Continue?", 
+                var codeResult = new List<string>();
+                var result = MessageBox.Show("The daily limit for adding to friends in the VC is" + 
+                    Constants.DAY_LIMIT  + " ! Run once a day! Continue?", 
                     "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
                 if (result == MessageBoxResult.Yes)
                 {
                     int counter = 0;
@@ -166,17 +184,21 @@ namespace JoyHoodApp
                     using (var sr = new StreamReader(tbFile.Text))
                     {
                         string line;
-                        while ((line = sr.ReadLine()) != null && counter < 50)
+                        while ((line = sr.ReadLine()) != null && counter < Constants.DAY_LIMIT)
                         {
                             int userId = 0;
                             int.TryParse(line, out userId);
                             if (userId > 0)
                             {
-                                VK.AddFriend(userId, accessToken);
+                                var code = VK.AddFriend(userId, accessToken);
+                                codeResult.Add(code);
                                 ++counter;
                             }
                         }
                     }
+                    var succesCount = codeResult.Count(x => x != "-1");
+                    var errorCount = codeResult.Count(x => x == "-1");
+                    MessageBox.Show(string.Format("Succes count = {0}, Error count = {1}", succesCount, errorCount));
                 }
             }
             catch (Exception ex)

@@ -9,6 +9,7 @@
         public const string REQUEST_URL = @"https://api.vkontakte.ru/method/{0}?access_token={1}";
         public const string GET_MEMBERS = "groups.getMembers";
         public const string FILE_MEMBERS = @"D:\test\members.txt";
+        public const string DIRECTORY = @"D:\test\";
         public const string GET_FRIENDS = "friends.get";
         public const string GET_INVITED_USERS = "groups.getInvitedUsers";
         public const string INVITE_FRIEND = "groups.invite";
@@ -19,5 +20,7 @@
                                              "Присоединяйся к нам. " +
                                              "JoyHood - удобная площадка для того, чтобы выгодно купить или продать детские вещи (детскую одежду, обувь, коляски и пр.). У нас есть много классных предложений. " +
                                              "Вещи на любой вкус. Ассортимент постоянно пополняется";
+
+        public const int DAY_LIMIT = 45;
     }
 }
